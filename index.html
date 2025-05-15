@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SIP.js Client</title>
+</head>
+<body>
+    <h1>SIP.js Client</h1>
+    <div id="callStatus">Status: Connecting...</div>
+    <div id="localVideo">
+        <p>Local Video:</p>
+        <video id="localVideoElement" autoplay muted playsinline></video>
+    </div>
+    <div id="remoteVideo">
+        <p>Remote Video:</p>
+        <video id="remoteVideoElement" autoplay playsinline></video>
+    </div>
+    <button id="callButton">Call</button>
+    <button id="hangupButton">Hangup</button>
+    <script src="./dist/bundle.js"></script><style>
+        #localVideo video, #remoteVideo video {
+          width: 320px;
+          height: 240px;
+          border: 1px solid black;
+          margin-top: 10px;
+        }
+      </style>
+</body>
+</html>

@@ -1,0 +1,311 @@
+[
+    {
+      "sipUri": "sip:6001wp@rverma",
+      "username": "6001",
+      "password": "iFafeaqm",
+      "targetSipUri": "sip:6002wp@rverma",
+      "role": "caller"
+    },
+    {
+      "sipUri": "sip:6002wp@rverma",
+      "username": "6002",
+      "password": "iFafeaqm",
+      "targetSipUri": "sip:6001wp@rverma",
+      "role": "callee"
+    },
+    {
+        "sipUri": "sip:6003wp@rverma",
+        "username": "6003",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6004wp@rverma",
+        "role": "caller"
+      },
+      {
+        "sipUri": "sip:6004wp@rverma",
+        "username": "6004",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6003wp@rverma",
+        "role": "callee"
+      },
+      {
+        "sipUri": "sip:6005wp@rverma",
+        "username": "6005",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6006wp@rverma",
+        "role": "caller"
+      },
+      {
+        "sipUri": "sip:6006wp@rverma",
+        "username": "6006",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6005wp@rverma",
+        "role": "callee"
+      },
+      {
+        "sipUri": "sip:6007wp@rverma",
+        "username": "6007",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6008wp@rverma",
+        "role": "caller"
+      },
+      {
+        "sipUri": "sip:6008wp@rverma",
+        "username": "6008",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6007wp@rverma",
+        "role": "callee"
+      },
+      {
+        "sipUri": "sip:6009wp@rverma",
+        "username": "6009",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6010wp@rverma",
+        "role": "caller"
+      },
+      {
+        "sipUri": "sip:6010wp@rverma",
+        "username": "6010",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6009wp@rverma",
+        "role": "callee"
+      },
+      {
+        "sipUri": "sip:6011wp@rverma",
+        "username": "6011",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6012wp@rverma",
+        "role": "caller"
+      },
+      {
+        "sipUri": "sip:6012wp@rverma",
+        "username": "6012",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6011wp@rverma",
+        "role": "callee"
+      },
+      {
+        "sipUri": "sip:6013wp@rverma",
+        "username": "6013",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6014wp@rverma",
+        "role": "caller"
+      },
+      {
+        "sipUri": "sip:6014wp@rverma",
+        "username": "6014",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6013wp@rverma",
+        "role": "callee"
+      },
+      {
+        "sipUri": "sip:6015wp@rverma",
+        "username": "6015",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6016wp@rverma",
+        "role": "caller"
+      },
+      {
+        "sipUri": "sip:6016wp@rverma",
+        "username": "6016",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6015wp@rverma",
+        "role": "callee"
+      },
+      {
+        "sipUri": "sip:6017wp@rverma",
+        "username": "6017",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6018wp@rverma",
+        "role": "caller"
+      },
+      {
+        "sipUri": "sip:6018wp@rverma",
+        "username": "6018",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6017wp@rverma",
+        "role": "callee"
+      },
+      {
+        "sipUri": "sip:6019wp@rverma",
+        "username": "6019",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6020wp@rverma",
+        "role": "caller"
+      },
+      {
+        "sipUri": "sip:6020wp@rverma",
+        "username": "6020",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6019wp@rverma",
+        "role": "callee"
+      },
+      {
+        "sipUri": "sip:6021wp@rverma",
+        "username": "6021",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6022wp@rverma",
+        "role": "caller"
+      },
+      {
+        "sipUri": "sip:6022wp@rverma",
+        "username": "6022",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6021wp@rverma",
+        "role": "callee"
+      },
+      {
+        "sipUri": "sip:6023wp@rverma",
+        "username": "6023",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6024wp@rverma",
+        "role": "caller"
+      },
+      {
+        "sipUri": "sip:6024wp@rverma",
+        "username": "6024",
+        "password": "iFafeaqm",
+        "targetSipUri": "sip:6023wp@rverma",
+        "role": "callee"
+      },
+      {
+          "sipUri": "sip:6025wp@rverma",
+          "username": "6025",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6026wp@rverma",
+          "role": "caller"
+        },
+        {
+          "sipUri": "sip:6026wp@rverma",
+          "username": "6026",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6025wp@rverma",
+          "role": "callee"
+        },
+        {
+          "sipUri": "sip:6027wp@rverma",
+          "username": "6027",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6028wp@rverma",
+          "role": "caller"
+        },
+        {
+          "sipUri": "sip:6028wp@rverma",
+          "username": "6028",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6027wp@rverma",
+          "role": "callee"
+        },
+        {
+          "sipUri": "sip:6029wp@rverma",
+          "username": "6029",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6030wp@rverma",
+          "role": "caller"
+        },
+        {
+          "sipUri": "sip:6030wp@rverma",
+          "username": "6030",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6029wp@rverma",
+          "role": "callee"
+        },
+        {
+          "sipUri": "sip:6031wp@rverma",
+          "username": "6031",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6032wp@rverma",
+          "role": "caller"
+        },
+        {
+          "sipUri": "sip:6032wp@rverma",
+          "username": "6032",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6031wp@rverma",
+          "role": "callee"
+        },
+        {
+          "sipUri": "sip:6033wp@rverma",
+          "username": "6033",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6034wp@rverma",
+          "role": "caller"
+        },
+        {
+          "sipUri": "sip:6034wp@rverma",
+          "username": "6034",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6033wp@rverma",
+          "role": "callee"
+        },
+        {
+          "sipUri": "sip:6035wp@rverma",
+          "username": "6035",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6036wp@rverma",
+          "role": "caller"
+        },
+        {
+          "sipUri": "sip:6036wp@rverma",
+          "username": "6036",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6035wp@rverma",
+          "role": "callee"
+        },
+        {
+          "sipUri": "sip:6037wp@rverma",
+          "username": "6037",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6038wp@rverma",
+          "role": "caller"
+        },
+        {
+          "sipUri": "sip:6038wp@rverma",
+          "username": "6038",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6037wp@rverma",
+          "role": "callee"
+        },
+        {
+          "sipUri": "sip:6039wp@rverma",
+          "username": "6039",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6040wp@rverma",
+          "role": "caller"
+        },
+        {
+          "sipUri": "sip:6040wp@rverma",
+          "username": "6040",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6039wp@rverma",
+          "role": "callee"
+        },
+        {
+          "sipUri": "sip:6041wp@rverma",
+          "username": "6041",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6042wp@rverma",
+          "role": "caller"
+        },
+        {
+          "sipUri": "sip:6042wp@rverma",
+          "username": "6042",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6041wp@rverma",
+          "role": "callee"
+        },
+        {
+          "sipUri": "sip:6043wp@rverma",
+          "username": "6043",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6044wp@rverma",
+          "role": "caller"
+        },
+        {
+          "sipUri": "sip:6044wp@rverma",
+          "username": "6044",
+          "password": "iFafeaqm",
+          "targetSipUri": "sip:6043wp@rverma",
+          "role": "callee"
+        }
+  ]
+  

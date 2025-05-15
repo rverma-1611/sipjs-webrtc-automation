@@ -1,0 +1,142 @@
+// Updated client.js using SIP.js UserAgent with corrected syntax
+import * as SIP from 'sip.js';
+
+// 1. Configuration (Replace with your SIP server credentials)
+const sipUri = 'sip:6000wp@rverma';
+const wsServer = 'wss://qa-u22-tor4.netsapiens.com:9002';
+const username = '6000';
+const password = 's4X8RV0Q8oxvPnaG';
+const targetSipUri = 'sip:8080@rverma';
+
+// Get HTML elements
+const callStatusElement = document.getElementById('callStatus');
+const callButton = document.getElementById('callButton');
+const hangupButton = document.getElementById('hangupButton');
+const localVideoElement = document.getElementById('localVideoElement');
+const remoteVideoElement = document.getElementById('remoteVideoElement');
+
+let userAgent;
+let session;
+
+// Function to update call status
+function updateCallStatus(status) {
+    callStatusElement.textContent = `Status: ${status}`;
+}
+
+// Function to start the UserAgent and Register
+async function startAndRegister() {
+    try {
+        userAgent = new SIP.UserAgent({
+            uri: SIP.UserAgent.makeURI(sipUri),
+            transportOptions: {
+                server: wsServer
+            },
+            authorizationUsername: username,
+            authorizationPassword: password
+        });
+
+        userAgent.delegate = {
+            onInvite(invitation) {
+                session = invitation;
+                updateCallStatus('Incoming call...');
+
+                invitation.accept({
+                    sessionDescriptionHandlerOptions: {
+                        constraints: { audio: true, video: true },
+                        render: {
+                            local: localVideoElement,
+                            remote: remoteVideoElement
+                        }
+                    }
+                }).then(() => {
+                    updateCallStatus('Call Accepted');
+                    hangupButton.disabled = false;
+                    callButton.disabled = true;
+                }).catch(error => {
+                    updateCallStatus(`Error accepting call: ${error.message}`);
+                });
+            }
+        };
+
+        await userAgent.start();
+        // ✅ Create Registerer and register
+        const registerer = new SIP.Registerer(userAgent);
+        await registerer.register();
+        updateCallStatus('Registered');
+        callButton.disabled = false;
+        hangupButton.disabled = true;
+
+    } catch (error) {
+        updateCallStatus(`Failed to start: ${error.message}`);
+        console.error('Error starting UserAgent:', error);
+        callButton.disabled = true;
+        hangupButton.disabled = true;
+    }
+}
+
+// Function to make a call
+async function makeCall() {
+    if (!userAgent) {
+        alert('Not registered. Wait for registration to complete.');
+        return;
+    }
+
+    updateCallStatus('Calling...');
+    callButton.disabled = true;
+    hangupButton.disabled = false;
+
+    try {
+        session = userAgent.invite(SIP.UserAgent.makeURI(targetSipUri), {
+            sessionDescriptionHandlerOptions: {
+                constraints: { audio: true, video: true },
+                render: {
+                    local: localVideoElement,
+                    remote: remoteVideoElement
+                }
+            }
+        });
+
+        session.delegate = {
+            onAccept() {
+                updateCallStatus('Call Accepted');
+            },
+            onProgress(response) {
+                updateCallStatus(`Call Progress: ${response.message.statusCode}`);
+            },
+            onTerminate() {
+                updateCallStatus('Call Ended');
+                callButton.disabled = false;
+                hangupButton.disabled = true;
+                session = null;
+            }
+        };
+
+    } catch (error) {
+        updateCallStatus(`Call Error: ${error.message}`);
+        console.error('Call Error:', error);
+        callButton.disabled = false;
+        hangupButton.disabled = true;
+        session = null;
+    }
+}
+
+// Function to hang up a call
+function hangupCall() {
+    if (session) {
+        updateCallStatus('Hanging up...');
+        session.bye();
+        session = null;
+        updateCallStatus('Call ended');
+        callButton.disabled = false;
+        hangupButton.disabled = true;
+        localVideoElement.srcObject = null;
+        remoteVideoElement.srcObject = null;
+    } else if (userAgent) {
+        userAgent.unregister();
+    }
+}
+
+// Event Listeners
+callButton.addEventListener('click', makeCall);
+hangupButton.addEventListener('click', hangupCall);
+window.addEventListener('load', startAndRegister);
